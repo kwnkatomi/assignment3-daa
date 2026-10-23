@@ -51,7 +51,6 @@ public class DSU {
             root = parent[root];
         }
 
-        // Path compression
         while (x != root) {
             int next = parent[x];
             parent[x] = root;
@@ -69,7 +68,6 @@ public class DSU {
             return false;
         }
 
-        // Keep rootX as the root of the larger component
         if (size[rootX] < size[rootY]) {
             int temp = rootX;
             rootX = rootY;
